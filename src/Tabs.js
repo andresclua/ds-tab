@@ -1,5 +1,5 @@
 import JSUTIL from '@andresclua/jsutil/src/js_helper';
-class Tab{
+class Tabs{
     constructor(config){
         this.tabs = config.tabs;
         this.tabActive = config.tabActive;
@@ -64,4 +64,4 @@ class Tab{
 }
 
 
-export default Tab;   
+export default Tabs;   
