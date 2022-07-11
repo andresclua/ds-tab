@@ -44,8 +44,8 @@ npm install @andresclua/tab
 ```
 3 -  the package
 ```sh
-import Collapse from '@andresclua/tab/src/Tab';
-new Collapse()  
+import Tab from '@andresclua/tab/src/Tab';
+new Tab()  
 ```
 4 - Your Html should look like this
 
@@ -71,9 +71,9 @@ new Collapse()
 ```
 
 ### For Nuxt
-1 - Create a file Collapse.js inside plugins folder & add this.
+1 - Create a file TAb.js inside plugins folder & add this.
 ```sh
-import Collapse from '@andresclua/tab/src/Tab';
+import Tab from '@andresclua/tab/src/Tab';
 export default ({ app }) => {
     inject('Tab', data => new Tab(data) );
 };
