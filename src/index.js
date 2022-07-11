@@ -1,34 +1,28 @@
 
-import Modal from './Modal';
+import Tab from './Tab';
 class Page{
     constructor(){
         this.init()
     }
     init(){ 
-        // const options = {
-        //     modalActiveClass: 'b--modal-a--is-active',
-        //     backdrop: 'b--modal-backdrop-a',
-        //     backdropActiveClass: 'b--modal-backdrop-a--is-active',
-        // };
-        const modal = new Modal({
-            backdrop: 'b--modal-backdrop-a',
-            backdropActiveClass: 'b--modal-backdrop-a--is-active',
-            modal:'b--modal-a',
-            modalIdTarget : 'modal-1',
-            modalActiveClass:'b--modal-a--is-active',
+        const tab = new Tab({
+            tab:'b--tab-a',
+            tabIDTarget : 'tab-2',
+            tabActiveClass:'b--tabs-a__bd__item--is-active',
+            tabListActiveClass: 'b--tabs-a__hd__list-item__link--is-active',
+            tabTrigger : 'data-tab-to-open',
+            tabBody : 'data-tab-body',
             onHide : () => {
-                console.log("hide modal");
+                console.log("hide tabs");
             },
             onShow : () =>{
-                console.log("show");
+                console.log("show tab");
             }
         });
-        modal.show()
-        setTimeout(()=>{
-            modal.hide()
-        },3000)
-        // // document.querySelector("[tf-ds-element='modal']")
-
+        tab.show()
+        // setTimeout(()=>{
+        //     tab.hide()
+        // },3000)
     }
 }
 export default Page;

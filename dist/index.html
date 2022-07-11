@@ -14,114 +14,70 @@
                 <div class="col">
                     <h5>Collapse</h5>
                     <style>
-                       .b--modal-a {
-  opacity: 0;
-  visibility: hidden;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1000;
-  transition: all 0.3s ease-in-out;
-  width: 60%;
-  background-color: #78f2c5;
-  padding: 2rem;
-  transition: transform 0.3s 0s ease;
-}
-.b--modal-a__btn {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  color: #1a191d;
-}
-.b--modal-a__btn__icon {
-  color: #1a191d;
-  height: 1rem;
-}
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  .b--modal-a__btn__icon {
-    width: 1rem;
-  }
-}
-.b--modal-a__btn__icon path {
-  fill: #1a191d;
-}
-.b--modal-a--is-active {
-  visibility: visible;
-  opacity: 1;
-}
-
-.b--modal-backdrop-a {
-  visibility: visible;
-  opacity: 1;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: 100;
-  background-color: rgba(26, 25, 29, 0.7);
-  transform: translate(0px, 100%);
-  transition: transform 0.3s 0s ease;
-}
-.b--modal-backdrop-a--is-active{
-  transform: translate(0px, 0%);
-}
-
-                    </style>
-
-        <button type="button" class="b--btn-a"  tf-ds-modal-target="modal-1">
-          Launch demo modal
-        </button>
-
-        <div id="modal-1" class="b--modal-a" role="dialog">
-            <h3 class="f--font-third">Welcome to a super modal</h3>
-            <img src="https://www.turn-keytechnologies.com/wp-content/uploads/2020/02/aruba-mobility-master.png" alt="">
-            <p class="">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-            <button class="b--modal-a__btn" tf-ds-modal-close="modal-1" aria-label="Close">
-                <svg class="b--modal-a__btn__icon apb apb-close" viewBox="0 0 15.81 15.81" enable-background="new 0 0 15.81 15.81" xml:space="preserve">
-                    <path d="M8.74,8.03l6.82,6.82l-0.71,0.71L8.03,8.74l-7.07,7.07L0.25,15.1l7.07-7.07L0,0.71L0.71,0l7.32,7.32l7.07-7.07l0.71,0.71
-                    L8.74,8.03z"/>
-                </svg>
-            </button>
-        </div>
-                    
-                <!-- <button 
-                    class="b--btn-a" 
-                    data-ds-element="modal"
-                    data-target="#modal-1"
-                    data-onload="false"
-                    data-onload-time="3"
-                    data-target-class="b--modal-a--is-active"
-                    data-backdrop="b--modal-backdrop-a"
-                    data-backdrop-class="b--backdrop-a--is-active">
-                    Trigger Modal
-                </button>
-                
-                <div id="modal-1" class="b--modal-a" role="dialog">
-                    <h3 class="f--font-third">Welcome to a super modal</h3>
-                    <img src="https://www.turn-keytechnologies.com/wp-content/uploads/2020/02/aruba-mobility-master.png" alt="">
-                    <p class="">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    <button class="b--modal-a__btn" data-dismiss="modal-1" aria-label="Close">
-                        <svg class="b--modal-a__btn__icon apb apb-close" viewBox="0 0 15.81 15.81" enable-background="new 0 0 15.81 15.81" xml:space="preserve">
-                            <path d="M8.74,8.03l6.82,6.82l-0.71,0.71L8.03,8.74l-7.07,7.07L0.25,15.1l7.07-7.07L0,0.71L0.71,0l7.32,7.32l7.07-7.07l0.71,0.71
-                            L8.74,8.03z"/>
-                        </svg>
-                    </button>
-                </div>
-           -->
+                      .b--tabs-a__hd__list-item__link{
+                        display:block;
+                        font-family:Jost,sans-serif;
+                        font-weight:300;
+                        line-height:1.35;
+                        letter-spacing:.26px;
+                        font-size:1rem;
+                        text-decoration:none!important;
+                        text-underline-position:auto;
+                        display:inline-block;
+                        background:#49c5f3;color:#1a191d;
+                        -webkit-transition:all .3s ease-in-out;
+                        transition:all .3s ease-in-out;
+                        position:relative;
+                        padding:.45455rem .5rem
+                      }
+                      .b--tabs-a__hd__list-item__link--is-active,.b--tabs-a__hd__list-item__link:focus,
+                      .b--tabs-a__hd__list-item__link:hover{
+                        background:#3ca8b0
+                      }
+                      .b--tabs-a__bd{
+                        padding-top:1rem
+                      }
+                      .b--tabs-a__bd__item{
+                        overflow:hidden;
+                        max-height:0
+                      }
+                      .b--tabs-a__bd__item--is-active{
+                        max-height:99rem;
+                        opacity:1
+                      }
 
 
+                      </style>
+
+                      <div class="b--tabs-a f--mb-32" 
+                      data-ds-element="tabs"
+                      data-list-item-active="b--tabs-a__hd__list-item__link--is-active"
+                      data-tab-active-class="b--tabs-a__bd__item--is-active"
+                      data-tab-active-id="tab-1"
+                      >
+                        <ul class="b--tabs-a__hd js--tabs-hd">
+                            <li class="b--tabs-a__hd__list-item">
+                                <a href="#" class="b--tabs-a__hd__list-item__link" data-tab-to-open="tab-1">Item1</a>
+                            </li>
+                            <li class="b--tabs-a__hd__list-item">
+                                <a href="#" class="b--tabs-a__hd__list-item__link" data-tab-to-open="tab-2">Item2</a>
+                            </li>
+                        </ul>
+                        <div class="b--tabs-a__bd js--tabs-bd">
+                            <div class="b--tabs-a__bd__item" id="tab-1" data-tab-body="tab-1">
+                                <p>Content item 1 item 1 item 1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, commodi illum nihil maxime quaerat eos sequi error natus neque, debitis ducimus veniam minus animi iure suscipit at accusamus, laborum fuga! Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis blanditiis, eveniet consequatur omnis voluptatum, possimus qui itaque doloremque laudantium, veniam error ab perspiciatis tempora labore aperiam ratione eum non ipsum.</p>
+                            </div>
+                            <div class="b--tabs-a__bd__item" id="tab-2" data-tab-body="tab-2">
+                                <p>Content item 2 item 2 item 2 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, commodi illum nihil maxime quaerat eos sequi error natus neque, debitis ducimus veniam minus animi iure suscipit at accusamus, laborum fuga! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis eligendi odio, esse debitis saepe eaque porro odit fugiat nihil quasi, laboriosam magni tempore dolor. Delectus nam amet doloribus eius molestias. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt laudantium repudiandae pariatur numquam expedita molestias rem accusamus temporibus, nostrum labore ut et incidunt eius quaerat adipisci, deleniti ea, vel excepturi?</p>
+                            </div>
+                        </div>
+                      </div>
                     <hr>
-                    
-                   
-
                 </div>
             </div>
         </div>
     </section>
     <br><br><br><br><br><br><br>
-
     <script src="./main.js"></script>
 </body>
 </html>
