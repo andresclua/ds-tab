@@ -1,6 +1,6 @@
 {
   "name": "@andresclua/tabs",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Tab Component",
   "main": "",
   "scripts": {
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andresclua/ds-tabs.git"
+    "url": "git+https://github.com/andresclua/ds-tab.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/andresclua/ds-tabs/issues"
+    "url": "https://github.com/andresclua/ds-tab/issues"
   },
-  "homepage": "https://github.com/andresclua/ds-tabs#readme",
+  "homepage": "https://github.com/andresclua/ds-tab#readme",
   "devDependencies": {
     "babel-loader": "^8.2.2",
     "webpack": "^5.37.1",
