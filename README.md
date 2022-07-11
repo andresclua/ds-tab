@@ -73,7 +73,7 @@ new Tabs()
 ### For Nuxt
 1 - Create a file TAb.js inside plugins folder & add this.
 ```sh
-import Tab from '@andresclua/tabs/src/Tabs';
+import Tabs from '@andresclua/tabs/src/Tabs';
 export default ({ app }) => {
     inject('Tabs', data => new Tabs(data) );
 };
