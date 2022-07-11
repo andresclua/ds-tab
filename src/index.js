@@ -1,4 +1,3 @@
-
 import Tab from './Tab';
 class Page{
     constructor(){
@@ -7,11 +6,11 @@ class Page{
     init(){ 
         const tab = new Tab({
             tab:'b--tab-a',
-            tabIDTarget : 'tab-2',
+            tabActive : 'tab-1',
             tabActiveClass:'b--tabs-a__bd__item--is-active',
-            tabListActiveClass: 'b--tabs-a__hd__list-item__link--is-active',
-            tabTrigger : 'data-tab-to-open',
-            tabBody : 'data-tab-body',
+            tabBodyActiveClass: 'b--tabs-a__hd__list-item__link--is-active',
+            tabTrigger : 'tf-ds-tab-to-open',
+            tabBody : 'tf-ds-tab-body',
             onHide : () => {
                 console.log("hide tabs");
             },
@@ -19,10 +18,6 @@ class Page{
                 console.log("show tab");
             }
         });
-        tab.show()
-        // setTimeout(()=>{
-        //     tab.hide()
-        // },3000)
     }
 }
 export default Page;

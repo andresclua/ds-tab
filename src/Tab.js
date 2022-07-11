@@ -2,12 +2,11 @@ import JSUTIL from '@andresclua/jsutil/src/js_helper';
 class Tab{
     constructor(config){
         this.tabs = config.tabs;
+        this.tabActive = config.tabActive;
         this.tabActiveClass = config.tabActiveClass;
-        this.tabListActiveClass = config.tabListActiveClass;
-        this.tabID = config.tabIDTarget;
+        this.tabBodyActiveClass = config.tabBodyActiveClass;
         this.tabTrigger = config.tabTrigger;
         this.tabBody = config.tabBody;
-        this.time = 400;
 
         this.onshow = config.onShow;
         this.onhide = config.onHide;
@@ -17,7 +16,9 @@ class Tab{
         this.events()
     }
 
-    init (){  }
+    init (){ 
+        this.show()
+     }
 
     events(){
         document.querySelectorAll(`[${this.tabTrigger}]`).forEach((element)=>{
@@ -33,16 +34,16 @@ class Tab{
         // Hides all active classes
         this.hide();
         // apply class to trigger 
-        this.JSUTIL.toggleClass(element,this.tabListActiveClass);
+        this.JSUTIL.toggleClass(element,this.tabBodyActiveClass);
         // apply class to body   
         var bodyelement = element.getAttribute(`${this.tabTrigger}`);
         this.JSUTIL.toggleClass(document.getElementById(bodyelement),this.tabActiveClass);
     }
 
-    // Shows tab with TabID 
+    // Shows tab with tabActive 
     show(){
-        this.JSUTIL.addClass(document.getElementById(this.tabID),this.tabActiveClass);
-        this.JSUTIL.addClass(document.querySelector(`[${this.tabTrigger} = ` + this.tabID),this.tabListActiveClass);
+        this.JSUTIL.addClass(document.getElementById(this.tabActive),this.tabActiveClass);
+        this.JSUTIL.addClass(document.querySelector(`[${this.tabTrigger} = ` + this.tabActive),this.tabBodyActiveClass);
         if(this.onshow)
             this.onshow()
     }
@@ -55,7 +56,7 @@ class Tab{
         });
         // removes class to trigger 
         document.querySelectorAll(`[${this.tabTrigger}]`).forEach((el)=>{
-            this.JSUTIL.removeClass(el,this.tabListActiveClass)
+            this.JSUTIL.removeClass(el,this.tabBodyActiveClass)
         });
         if(this.onhide)
             this.onhide()
