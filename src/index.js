@@ -1,10 +1,10 @@
-import Tab from './Tab';
+import Tabs from './Tabs';
 class Page{
     constructor(){
         this.init()
     }
     init(){ 
-        const tab = new Tab({
+        const tabs = new Tabs({
             tab:'b--tab-a',
             tabActive : 'tab-1',
             tabActiveClass:'b--tabs-a__bd__item--is-active',

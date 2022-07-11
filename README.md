@@ -44,8 +44,8 @@ npm install @andresclua/tab
 ```
 3 -  the package
 ```sh
-import Tab from '@andresclua/tab/src/Tab';
-new Tab()  
+import Tab from '@andresclua/tabs/src/Tabs';
+new Tabs()  
 ```
 4 - Your Html should look like this
 
@@ -73,15 +73,15 @@ new Tab()
 ### For Nuxt
 1 - Create a file TAb.js inside plugins folder & add this.
 ```sh
-import Tab from '@andresclua/tab/src/Tab';
+import Tab from '@andresclua/tabs/src/Tabs';
 export default ({ app }) => {
-    inject('Tab', data => new Tab(data) );
+    inject('Tabs', data => new Tabs(data) );
 };
 ```
 2 - Reference in your nuxt.config.js
 ```sh
 plugins: [
-    { src: '~/plugins/Tab.js', ssr: false }
+    { src: '~/plugins/Tabs.js', ssr: false }
   ]
 ```
 3 - Use it in your .vue file
