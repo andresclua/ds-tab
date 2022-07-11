@@ -40,7 +40,7 @@ This is my second project within npm, it's a simple tab/toggle component
 ### JS Setup
 2 - Import the package
 ```sh
-npm install @andresclua/tab
+npm install @andresclua/tabs
 ```
 3 -  the package
 ```sh
