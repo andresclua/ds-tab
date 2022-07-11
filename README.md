@@ -40,12 +40,12 @@ This is my second project within npm, it's a simple tab/toggle component
 ### JS Setup
 2 - Import the package
 ```sh
-npm install @andresclua/tabs
+npm install @andresclua/tab
 ```
 3 -  the package
 ```sh
-import Collapse from '@andresclua/tab/src/Tab';
-new Collapse()  
+import Tab from '@andresclua/tab/src/Tab';
+new Tab()  
 ```
 4 - Your Html should look like this
 
@@ -71,18 +71,36 @@ new Collapse()
 ```
 
 ### For Nuxt
-1 - Create a file Collapse.js inside plugins folder & add this.
+1 - Create a file TAb.js inside plugins folder & add this.
 ```sh
-import Collapse from '@andresclua/tab/src/Tab';
+import Tab from '@andresclua/tab/src/Tab';
 export default ({ app }) => {
-    new Tab()
+    inject('Tab', data => new Tab(data) );
 };
 ```
 2 - Reference in your nuxt.config.js
 ```sh
 plugins: [
-    { src: '~/plugins/tab.js', ssr: false }
+    { src: '~/plugins/Tab.js', ssr: false }
   ]
+```
+3 - Use it in your .vue file
+```sh
+mounted(){
+const tab = new Tab({
+    tab:'b--tab-a',
+    tabActive : 'tab-1',
+    tabActiveClass:'b--tabs-a__bd__item--is-active',
+    tabBodyActiveClass: 'b--tabs-a__hd__list-item__link--is-active',
+    tabTrigger : 'tf-ds-tab-to-open',
+    tabBody : 'tf-ds-tab-body',
+    onHide : () => {
+        console.log("hide tabs");
+    },
+    onShow : () =>{
+        console.log("show tab");
+    }
+});
 ```
 ![awesome](https://media.giphy.com/media/LeikbswJKXOMM/giphy.gif)
 
