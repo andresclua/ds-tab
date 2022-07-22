@@ -1,10 +1,9 @@
 import JSUTIL from '@andresclua/jsutil/src/js_helper';
 class Tabs{
     constructor(config){
-        this.tabs = config.tabs;
-        this.tabActive = config.tabActive;
-        this.tabActiveClass = config.tabActiveClass;
-        this.tabBodyActiveClass = config.tabBodyActiveClass;
+        this.tabActive = config.tabActive; //tab active by default
+        this.tabActiveClass = config.tabActiveClass; //active class on header
+        this.tabBodyActiveClass = config.tabBodyActiveClass; //active class on
         this.tabTrigger = config.tabTrigger;
         this.tabBody = config.tabBody;
 
