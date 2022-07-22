@@ -8,8 +8,8 @@ class Page{
             tabActive : 'tab-a-2',
             tabActiveClass:'b--tabs-a__bd__item--is-active',
             tabBodyActiveClass: 'b--tabs-a__hd__list-item__link--is-active',
-            tabTrigger : 'tf-ds-tab-to-open',
-            tabBody : 'tf-ds-tab-body',
+            tabTrigger : 'tf-ds-tab-to-open-a',
+            tabBody : 'tf-ds-tab-body-a',
             onHide : () => {
                 console.log("hide tabs");
             },
@@ -23,8 +23,8 @@ class Page{
             tabActive : 'tab-b-1',
             tabActiveClass:'b--tabs-b__bd__item--is-active',
             tabBodyActiveClass: 'b--tabs-b__hd__list-item__link--is-active',
-            tabTrigger : 'tf-ds-tab-to-open',
-            tabBody : 'tf-ds-tab-body',
+            tabTrigger : 'tf-ds-tab-to-open-b',
+            tabBody : 'tf-ds-tab-body-b',
             onHide : () => {
                 console.log("hide tabs");
             },
