@@ -74,7 +74,7 @@ new Tabs()
 1 - Create a file TAb.js inside plugins folder & add this.
 ```sh
 import Tabs from '@andresclua/tabs/src/Tabs';
-export default ({ app }) => {
+export default ({ app }, inject) => {
     inject('Tabs', data => new Tabs(data) );
 };
 ```
@@ -87,7 +87,7 @@ plugins: [
 3 - Use it in your .vue file
 ```sh
 mounted(){
-    const tab = new Tab({
+    const tab = new Tabs({
         tab:'b--tab-a',
         tabActive : 'tab-1',
         tabActiveClass:'b--tabs-a__bd__item--is-active',
