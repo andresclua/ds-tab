@@ -20,13 +20,11 @@ class Tabs{
      }
 
     events(){
-        this.tabs.forEach(element => {
-            document.querySelectorAll(`[${this.tabTrigger}]`).forEach((element)=>{
-                element.addEventListener('click', (item)=>{
-                    item.preventDefault();
-                    // Hides all active classes
-                    this.toggle(element);
-                })
+        document.querySelectorAll(`[${this.tabTrigger}]`).forEach((element)=>{
+            element.addEventListener('click', (item)=>{
+                item.preventDefault();
+                // Hides all active classes
+                this.toggle(element);
             })
         })
     }
