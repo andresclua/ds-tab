@@ -5,7 +5,7 @@ class Page{
     }
     init(){ 
         const tabs = new Tabs({
-            tabActive : 'tab-1',
+            tabActive : 'tab-2',
             tabActiveClass:'b--tabs-a__bd__item--is-active',
             tabBodyActiveClass: 'b--tabs-a__hd__list-item__link--is-active',
             tabTrigger : 'tf-ds-tab-to-open',
