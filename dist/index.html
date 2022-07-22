@@ -7,11 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-  <title>JS Utilities by - Andrés Clúa</title>
+  <title>Tabs - Andrés Clúa</title>
 </head>
 
 <body>
-  <section class="mt-2 mb-2">
+  <section class="mt-5 mb-5">
     <div class="container">
       <div class="row">
         <div class="col">
@@ -19,25 +19,57 @@
           <div class="b--tabs-a f--mb-32">
             <ul class="b--tabs-a__hd">
               <li class="b--tabs-a__hd__list-item">
-                <a href="#" class="b--tabs-a__hd__list-item__link" tf-ds-tab-to-open="tab-1">Item1</a>
+                <a href="#" class="b--tabs-a__hd__list-item__link" tf-ds-tab-to-open="tab-a-1">Item1</a>
               </li>
               <li class="b--tabs-a__hd__list-item">
-                <a href="#" class="b--tabs-a__hd__list-item__link" tf-ds-tab-to-open="tab-2">Item2</a>
+                <a href="#" class="b--tabs-a__hd__list-item__link" tf-ds-tab-to-open="tab-a-2">Item2</a>
               </li>
             </ul>
             <div class="b--tabs-a__bd">
-              <div class="b--tabs-a__bd__item" id="tab-1" tf-ds-tab-body="tab-1">
+              <div class="b--tabs-a__bd__item" id="tab-a-1" tf-ds-tab-body="tab-a-1">
                 <p>Content item 1 item 1 item 1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, commodi
                   illum nihil maxime quaerat eos sequi error natus neque, debitis ducimus veniam minus animi iure
-                  suscipit at acc<a href='#' tf-ds-tab-to-open="tab-2">TAB 2</a>usamus, laborum fuga! Lorem ipsum dolor
+                  suscipit at acc<a href='#' tf-ds-tab-to-open="tab-a-2">TAB 2</a>usamus, laborum fuga! Lorem ipsum dolor
                   sit amet consectetur adipisicing elit. Debitis blanditiis, eveniet consequatur omnis voluptatum,
                   possimus qui itaque doloremque laudantium, veniam error ab perspiciatis tempora labore aperiam ratione
                   eum non ipsum.</p>
               </div>
-              <div class="b--tabs-a__bd__item" id="tab-2" tf-ds-tab-body="tab-2">
+              <div class="b--tabs-a__bd__item" id="tab-a-2" tf-ds-tab-body="tab-a-2">
                 <p>Content item 2 item 2 item 2 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, commodi
                   illum nihil maxime quaerat eos sequi error natus neque, debitis ducimus veniam minus animi iure
-                  suscipit at accusamus, laborum fug<a href='#' tf-ds-tab-to-open="tab-1">TAB 1</a>a! Lorem ipsum dolor
+                  suscipit at accusamus, laborum fug<a href='#' tf-ds-tab-to-open="tab-a-1">TAB 1</a>a! Lorem ipsum dolor
+                  sit, amet consectetur adipisicing elit. Facilis eligendi odio, esse debitis saepe eaque porro odit
+                  fugiat nihil quasi, laboriosam magni tempore dolor. Delectus nam amet doloribus eius molestias. Lorem
+                  ipsum dolor sit, amet consectetur adipisicing elit. Deserunt laudantium repudiandae pariatur numquam
+                  expedita molestias rem accusamus temporibus, nostrum labore ut et incidunt eius quaerat adipisci,
+                  deleniti ea, vel excepturi?</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="b--tabs-b f--mb-32">
+            <ul class="b--tabs-b__hd">
+              <li class="b--tabs-b__hd__list-item">
+                <a href="#" class="b--tabs-b__hd__list-item__link" tf-ds-tab-to-open="tab-b-1">Item1</a>
+              </li>
+              <li class="b--tabs-a__hd__list-item">
+                <a href="#" class="b--tabs-b__hd__list-item__link" tf-ds-tab-to-open="tab-b-2">Item2</a>
+              </li>
+            </ul>
+            <div class="b--tabs-b__bd">
+              <div class="b--tabs-b__bd__item" id="tab-b-1" tf-ds-tab-body="tab-b-1">
+                <p>Content item 1 item 1 item 1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, commodi
+                  illum nihil maxime quaerat eos sequi error natus neque, debitis ducimus veniam minus animi iure
+                  suscipit at acc<a href='#' tf-ds-tab-to-open="tab-b-2">TAB 2</a>usamus, laborum fuga! Lorem ipsum dolor
+                  sit amet consectetur adipisicing elit. Debitis blanditiis, eveniet consequatur omnis voluptatum,
+                  possimus qui itaque doloremque laudantium, veniam error ab perspiciatis tempora labore aperiam ratione
+                  eum non ipsum.</p>
+              </div>
+              <div class="b--tabs-b__bd__item" id="tab-a-2" tf-ds-tab-body="tab-b-2">
+                <p>Content item 2 item 2 item 2 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, commodi
+                  illum nihil maxime quaerat eos sequi error natus neque, debitis ducimus veniam minus animi iure
+                  suscipit at accusamus, laborum fug<a href='#' tf-ds-tab-to-open="tab-b-1">TAB 1</a>a! Lorem ipsum dolor
                   sit, amet consectetur adipisicing elit. Facilis eligendi odio, esse debitis saepe eaque porro odit
                   fugiat nihil quasi, laboriosam magni tempore dolor. Delectus nam amet doloribus eius molestias. Lorem
                   ipsum dolor sit, amet consectetur adipisicing elit. Deserunt laudantium repudiandae pariatur numquam
@@ -107,6 +139,69 @@
     }
 
     .b--tabs-a__bd__item--is-active {
+      max-height: 99rem;
+      opacity: 1
+    }
+
+
+
+    
+
+    .b--tabs-b {
+      border:1px solid red;
+      /* empty for now */
+    }
+
+    /* Start Header Style */
+    .b--tabs-b__hd {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+
+    .b--tabs-b__hd__list-item {
+      display: inline-block;
+    }
+
+    .b--tabs-b__hd__list-item__link {
+      font-family: Arial, sans-serif;
+      font-weight: 300;
+      line-height: 1.35;
+      letter-spacing: .26px;
+      font-size: 1rem;
+      text-decoration: none !important;
+      text-underline-position: auto;
+      display: inline-block;
+      background: #a6a6a6;
+      color: #ffffff;
+      -webkit-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out;
+      position: relative;
+      padding: .45455rem .5rem
+    }
+
+    /* hover foucs and active state */
+    .b--tabs-b__hd__list-item__link:hover,
+    .b--tabs-b__hd__list-item__link:focus,
+    .b--tabs-b__hd__list-item__link--is-active {
+      background: #8d2c7d;
+      color: #ffffff;
+    }
+
+    /* End Header Style */
+    /* Start Body Style*/
+    .b--tabs-b__bd {
+      padding-top: 16px
+    }
+
+    .b--tabs-b__bd__item {
+      /* this should not be changed if possible*/
+      overflow: hidden;
+      max-height: 0;
+    }
+
+    .b--tabs-b__bd__item--is-active {
       max-height: 99rem;
       opacity: 1
     }
