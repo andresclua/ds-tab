@@ -5,7 +5,6 @@ class Page{
     }
     init(){ 
         const tabs = new Tabs({
-            tab:'b--tab-a',
             tabActive : 'tab-1',
             tabActiveClass:'b--tabs-a__bd__item--is-active',
             tabBodyActiveClass: 'b--tabs-a__hd__list-item__link--is-active',
@@ -18,6 +17,7 @@ class Page{
                 console.log("show tab");
             }
         });
+
     }
 }
 export default Page;

@@ -12,32 +12,60 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h5>Tabs</h5>
+                    <h5>Tabs Example</h5>
                     <style>
+                      .b--tabs-a{
+                        /* empty for now */
+                      }
+                      /* Header */
+                      .b--tabs-a__hd{
+                        list-style-type: none;
+                        padding:0;
+                        margin:0;
+                        display: flex;
+                      }
+                      .b--tabs-a__hd__list-item{
+                        display: inline-block;
+                      }
+                      
                       .b--tabs-a__hd__list-item__link{
-                        display:block;
-                        font-family:Jost,sans-serif;
+                        font-family: Arial,sans-serif;
                         font-weight:300;
                         line-height:1.35;
                         letter-spacing:.26px;
                         font-size:1rem;
-                        text-decoration:none!important;
+                        text-decoration:none!important; 
                         text-underline-position:auto;
                         display:inline-block;
-                        background:#49c5f3;color:#1a191d;
+                        background:#a6a6a6;
+                        color:#ffffff;
                         -webkit-transition:all .3s ease-in-out;
                         transition:all .3s ease-in-out;
                         position:relative;
                         padding:.45455rem .5rem
                       }
-                      .b--tabs-a__hd__list-item__link--is-active,.b--tabs-a__hd__list-item__link:focus,
-                      .b--tabs-a__hd__list-item__link:hover{
-                        background:#3ca8b0
+                      /* hover foucs and active state */
+                      .b--tabs-a__hd__list-item__link:hover,
+                      .b--tabs-a__hd__list-item__link:focus,
+                      .b--tabs-a__hd__list-item__link--is-active{
+                        background:#3ca8b0;
+                        color:#ffffff;
                       }
+
+                     /* Header */
+                      .b--tabs-a__bd{
+                        padding-top:16px
+                      }
+                     
+                      /* .b--tabs-a__hd__list-item__link{
+                        display: inline-block;
+                      }
+                      
                       .b--tabs-a__bd{
                         padding-top:1rem
                       }
-                      .b--tabs-a__bd__item{
+                       */
+                       .b--tabs-a__bd__item{
                         overflow:hidden;
                         max-height:0
                       }
@@ -46,11 +74,10 @@
                         opacity:1
                       }
 
-
                       </style>
 
                       <div class="b--tabs-a f--mb-32" >
-                        <ul class="b--tabs-a__hd js--tabs-hd">
+                        <ul class="b--tabs-a__hd">
                             <li class="b--tabs-a__hd__list-item">
                                 <a href="#" class="b--tabs-a__hd__list-item__link" tf-ds-tab-to-open="tab-1">Item1</a>
                             </li>
@@ -58,7 +85,7 @@
                                 <a href="#" class="b--tabs-a__hd__list-item__link" tf-ds-tab-to-open="tab-2">Item2</a>
                             </li>
                         </ul>
-                        <div class="b--tabs-a__bd js--tabs-bd">
+                        <div class="b--tabs-a__bd">
                             <div class="b--tabs-a__bd__item" id="tab-1" tf-ds-tab-body="tab-1">
                                 <p>Content item 1 item 1 item 1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, commodi illum nihil maxime quaerat eos sequi error natus neque, debitis ducimus veniam minus animi iure suscipit at acc<a href='#' tf-ds-tab-to-open="tab-2">TAB 2</a>usamus, laborum fuga! Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis blanditiis, eveniet consequatur omnis voluptatum, possimus qui itaque doloremque laudantium, veniam error ab perspiciatis tempora labore aperiam ratione eum non ipsum.</p>
                             </div>
@@ -67,6 +94,8 @@
                             </div>
                         </div>
                       </div>
+
+                      
                     <hr>
                 </div>
             </div>
